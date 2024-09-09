@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirby and Friends</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+            header {
+            background-color: #ffb6c1;
+            padding: 20px;
+        }
+        #kirby-header {
+            position: absolute;
+            top: 20px; /* Ajusta a posição vertical */
+            left: 30%; /* Move mais para a esquerda */
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #ff69b4;
+            background-color: #fff;
+            padding: 10px;
+        }
+
+
+        #kirby-header img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 60;
+            color: #ff69b4;
+        }
+
+        #characters {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .character {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .character img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .character:hover {
+            transform: scale(1.1);
+        }
+
+        h2 {
+            color: #ff69b4;
+        }
+
+        footer {
+            background-color: #ffb6c1;
+            padding: 10px;
+        }
+
+        .content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .content img {
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .content h2 {
+            color: #ff69b4;
+        } 
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="kirby-header">
+            <img src="https://i.pinimg.com/564x/fe/df/ee/fedfee09f1b334793b93879752623ff8.jpg" alt="Kirby">
+        </div>
+        <h1>Welcome to Kirby's World!</h1>
+        <p>Meet Kirby and his friends in this adorable adventure.</p>
+    </header>
+
+    <section id="characters">
+        <div class="character" data-content="kirby">
+            <img src="https://i.pinimg.com/736x/22/98/4f/22984f8bb29b76486eba32ecd5139e21.jpg " alt="Kirby">
+            <h2>Kirby</h2>
+            <p>O puffball rosa com uma coragem sem fim e um grande apetite!</p>
+        </div>
+        <div class="character" data-content="meta-knight">
+            <img src="https://i.pinimg.com/564x/1e/d8/00/1ed800c38bd418f60174a0ad8a6ccf45.jpg" alt="Meta Knight">
+            <h2>Meta Knight</h2>
+            <p>Um guerreiro misterioso com um forte senso de honra.</p>
+        </div>
+        <div class="character" data-content="king-dedede">
+            <img src="https://i.pinimg.com/564x/b9/04/16/b90416cd6e3efb9f8422f14a809f5a2f.jpg" alt="King Dedede">
+            <h2>King Dedede</h2>
+            <p>O autoproclamado rei da Dream Land, muitas vezes rival de Kirby</p>
+
+        </div>
+        <div class="character" data-content="waddle-dee">
+            <img src="https://i.pinimg.com/564x/c3/69/66/c36966363c13bcdcfb0f2c15d8af2510.jpg" alt="Waddle Dee">
+            <h2>Waddle Dee</h2>
+            <p>Um servo leal do Rei Dedede, mas também um bom amigo de Kirby.</p>
+        </div>
+    </section>
+
+    <div id="content-kirby" class="content">
+        <img src="https://i.pinimg.com/736x/49/2d/88/492d885c2f2e5f40aa8d8e53f1040ff8.jpg" alt="Kirby">
+        <h2>Kirby</h2>
+        <p>Redondo, rosa e surpreendentemente poderoso, Kirby™ é um dos heróis mais icônicos da história dos videogames. Um habitante do pacífico planeta Pop Star, Kirby se tornou um cidadão da Dream Land após derrotar o Rei Dedede. Ele pode inalar coisas com sua boca grande, copiando suas habilidades ou cuspindo-as novamente.</p>
+    </div>
+    <div id="content-meta-knight" class="content">
+        <img src="https://i.pinimg.com/564x/eb/a2/e4/eba2e47452bc8db8a464c8b4e3a216bb.jpg" alt="Meta Knight">
+        <h2>Meta Knight</h2>
+        <p>Meta Knight é um misterioso espadachim mascarado que é ao mesmo tempo amigo e rival de Kirby. Ele é um guerreiro honorável e poderoso, com uma forte crença na justiça e na força.</p>
+        <p>
+            É o rival de Kirby, embora sejam amigos, já lutaram muitas vezes no passado. No Subspace Emyssary, Meta Knight teve sua nave roubada e foi atrás dos invasores, o que o levou aos domínios do Príncipe Rei Marth, apesar de um breve desentendimento, ambos se aliaram contra os inimigos em seu caminho.
+        </p>
+    </div>
+
+    <div id="content-king-dedede" class="content">
+        <img src="https://i.pinimg.com/564x/f4/41/cf/f441cfe858f5410219da0af75553cf23.jpg" alt="King Dedede">
+        <h2>King Dedede</h2>
+        <p>King Dedede é o autoproclamado rei de Dream Land, muitas vezes rival de Kirby. Apesar de sua personalidade autoritária, ele desempenha um papel importante nas aventuras de Kirby.</p>
+    </div>
+
+    <div id="content-waddle-dee" class="content">
+        <img src="https://i.pinimg.com/736x/11/6b/c7/116bc74143239e6ebd5eb1f2b54bec53.jpg" alt="Waddle Dee">
+        <h2>Waddle Dee</h2>
+        <p>Waddle Dee é um leal servo de King Dedede, mas também um bom amigo de Kirby. Ele é conhecido por sua bondade e simplicidade.</p>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kirby's World - Nicole Albuquerque Alves </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const characters = document.querySelectorAll('.character');
+            const contents = document.querySelectorAll('.content');
+
+            characters.forEach(character => {
+                character.addEventListener('mouseover', () => {
+                    character.style.transform = 'scale(1.1)';
+                });
+
+                character.addEventListener('mouseout', () => {
+                    character.style.transform = 'scale(1)';
+                });
+
+                character.addEventListener('click', () => {
+                    const contentId = `content-${character.getAttribute('data-content')}`;
+                    contents.forEach(content => {
+                        if (content.id === contentId) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
